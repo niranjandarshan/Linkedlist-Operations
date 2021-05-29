@@ -1,0 +1,37 @@
+class Queue:
+    def __init__(self):
+        self.queue=[]
+    def enque(self,dataitem):
+        
+        if dataitem not in self.queue:
+            self.queue.insert(0,dataitem)
+            return True
+        return False
+    def dequeue(self):
+        if len(self.queue)>0:
+            self.queue.pop()
+        return "Queue is empty"
+    def peek(self):
+        return self.queue[-1]
+listitem=Queue()
+listitem.enque("1")
+listitem.enque("2")
+listitem.enque("3")
+listitem.enque("4")
+listitem.enque("5")
+listitem.enque("6")
+listitem.dequeue()
+listitem.peek()
+listitem.dequeue()
+listitem.peek()
+listitem.dequeue()
+listitem.peek()
+listitem.dequeue()
+listitem.peek()
+listitem.dequeue()
+listitem.peek()
+#listitem.dequeue()
+#listitem.peek()
+    
+            
+            
