@@ -1,0 +1,33 @@
+class Stack:
+    def __init__(self):
+        self.stack=[]
+    def push(self,dataitem):
+        if dataitem not in self.stack:
+            self.stack.append(dataitem)
+            return dataitem
+        else:
+            return False
+    def pop1(self):
+        if len(self.stack)<=0:
+            return "stack is empty"
+        else:
+            self.stack.pop()
+    def peek(self):
+        return self.stack[-1]
+    
+listitem=Stack()
+listitem.push("1")
+listitem.push("2")
+listitem.push("3")
+listitem.push("4")
+listitem.push("5")
+listitem.pop1()
+listitem.peek()
+listitem.pop1()
+listitem.pop1()
+print(listitem.peek())
+listitem.push("6")
+
+
+
+    
