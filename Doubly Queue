@@ -1,0 +1,36 @@
+class DoubleQueue:
+    def __init__(self):
+        self.queue=["1","2","3","4"]
+    def pushleft(self,data):
+        
+        if data not in self.queue:
+            self.queue.insert(0,data)
+            return True
+        return False
+    def pushright(self,data):
+        n=len(self.queue)
+        if data not in self.queue:
+            self.queue.insert(n,data)
+            return True
+        return False
+    def popleft(self):
+        if len(self.queue)>0:
+            return self.queue.pop()
+        return False
+    def popright(self):
+        if len(self.queue)>0:
+            return self.queue.pop()
+        return False
+    def peekleft(self):
+        return self.queue[0]
+    def peekright(self):
+        return self.queue[-1]
+    
+listitem=DoubleQueue()
+listitem.pushright("11")
+listitem.pushright("12")
+#listitem.popleft()
+listitem.popright()
+#listitem.peekleft()
+listitem.peekright()
+        
