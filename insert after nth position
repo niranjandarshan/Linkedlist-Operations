@@ -1,0 +1,35 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class Linkedlist:
+    def __init__(self):
+        self.head=None
+    def insertpos(self,pos,newdata):
+        count=0
+        loc=Node(newdata)
+        ptr=self.head
+        if pos==0:
+            loc.next=self.head
+            self.head=loc
+        else:
+            while pos!=count:
+                ptr=ptr.next
+                count=count+1
+            loc.next=ptr.next
+            ptr.next=loc
+        
+    
+    def printline(self):
+        temp=self.head
+        while temp is not None:
+            print(temp.data,"->")
+            temp=temp.next
+listitem=Linkedlist()
+listitem.head=Node("1")
+n2=Node("2")
+n3=Node("3")
+listitem.head.next=n2
+n2.next=n3
+listitem.insertpos(1,"5")
+listitem.printline()
